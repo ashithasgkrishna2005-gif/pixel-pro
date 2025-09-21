@@ -1,0 +1,31 @@
+# Ignore secrets
+.env
+
+# Ignore virtual environment
+.venv/
+venv/
+
+# Ignore Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+logs/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+git rm --cached .env
+git commit -m "Remove .env from repo"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+hf_token = os.getenv("HUGGINGFACE_TOKEN")
+ibm_key = os.getenv("IBM_API_KEY")
+ibm_url = os.getenv("IBM_URL")
+
+print("HF token starts with:", hf_token[:8])  # just for check

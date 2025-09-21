@@ -1,0 +1,3 @@
+drug_a,drug_b,severity,notes
+warfarin,aspirin,major,"Increased bleeding risk"
+amoxicillin,warfarin,moderate,"May increase INR"
